@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <button type="submit">Log in</button>
+  </form>
+  <script> 
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (event) => {
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    if (username === '' || password === '') {
+        alert('Please fill out all fields');
+        event.preventDefault();
+    }
+    });
+</script>
+  
+</body>
+</html>
